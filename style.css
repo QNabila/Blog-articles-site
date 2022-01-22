@@ -6,6 +6,11 @@
   font-family: "Epilogue", sans-serif;
   margin: 0;
 }
+
+.topnav{
+  display: none;
+}
+
 main,
 footer {
   background-color: #fdf0e9;
@@ -87,7 +92,7 @@ footer {
 .load-more-button {
   text-align: center;
 }
-.load-more-button button{
+.load-more-button button {
   background-color: white;
   padding: 18px 43px;
   margin-top: 115px;
@@ -114,11 +119,11 @@ footer {
   margin-top: 60px;
   margin-bottom: 67px;
 }
-.input-field{
-    display: flex;
-    float: right;
-    margin-top: 60px;
-    margin-bottom: 67px;
+.input-field {
+  display: flex;
+  float: right;
+  margin-top: 60px;
+  margin-bottom: 67px;
 }
 input {
   all: unset;
@@ -151,16 +156,113 @@ input ::-ms-input-placeholder {
   /* Microsoft Edge */
   color: rgba(57, 20, 0, 0.64);
 }
-.subscribe-button button{
-    background-color: white;
-    padding: 18px 43px;
-    font-weight: 900;
-    font-size: 14px;
-    box-shadow: 0px 3px 9px rgba(57, 20, 0, 0.08);
-    border-radius: 6px;
-    border: none;
-    color: #391400;
+.subscribe-button button {
+  background-color: white;
+  padding: 18px 43px;
+  font-weight: 900;
+  font-size: 14px;
+  box-shadow: 0px 3px 9px rgba(57, 20, 0, 0.08);
+  border-radius: 6px;
+  border: none;
+  color: #391400;
 }
+.footer-banner {
+  display: flex;
+  height: 544px;
+  background: #ef6d58;
+  border-radius: 6px;
+  padding-left: 100px;
+  padding-right: 100px;
+  margin-top: 111px;
+}
+.footer-banner img {
+  padding-top: 41px;
+  padding-bottom: 71px;
+}
+.banner-content h2 {
+  padding-top: 96px;
+  padding-bottom: 28px;
+  font-size: 56px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  color: white;
+  line-height: 64px;
+}
+.banner-content p {
+  font-size: 16px;
+  line-height: 32px;
+  color: rgba(255, 255, 255, 0.64);
+}
+.banner-content button {
+  background-color: white;
+  padding: 18px 43px;
+  margin-top: 34px;
+  font-weight: 900;
+  font-size: 14px;
+  box-shadow: 0px 3px 9px rgba(57, 20, 0, 0.08);
+  border-radius: 6px;
+  border: none;
+  color: #391400;
+}
+.footer-menu {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 89px;
+}
+.footer-menu h4 {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 32px;
+  color: #391400;
+}
+.menu-title {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 32px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #ef6d58;
+}
+.footer-menu p {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 32px;
+  color: #391400;
+}
+.social-icon img {
+  height: 48px;
+  width: 48px;
+  padding-left: 8px;
+}
+/* copyright area */
+.copyright-container{
+  display: flex;
+}
+.copyright-container{
+  padding-top: 43px;
+  padding-bottom: 52px;
+  margin-top: 68px;
+  border-top: 1px solid #f3d1bf;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 32px;
+  color: rgba(57, 20, 0, 0.64);
+  justify-content: space-between;
+}
+.copyright-link{
+  display: flex;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 32px;
+  text-align: right;
+  color: #391400;
+}
+.copyright-link p{
+  padding-left: 68px;
+}
+
+
+
 
 /* Media Queries */
 
@@ -177,7 +279,8 @@ input ::-ms-input-placeholder {
     padding: 0 23px 87px 23px;
     text-align: center;
   }
-  main,footer {
+  main,
+  footer {
     padding-right: 23px;
     padding-left: 23px;
   }
@@ -201,32 +304,144 @@ input ::-ms-input-placeholder {
   .blog-articles {
     grid-template-columns: repeat(1, 1fr);
   }
+  .load-more-button button {
+    margin-top: 33px;
+    margin-bottom: 0;
+  }
 
   /* footer */
-  .newsletter h3{
-      text-align: left;
-      justify-content: none;
+  .newsletter h3 {
+    text-align: left;
+    justify-content: none;
+  }
+  .newsletter {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .input-field {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .input-field input {
+    width: 100%;
+  }
+  .subscribe-button button {
+    font-size: 14px;
+    width: 100%;
+    margin-top: 16px;
+  }
+  .footer-banner {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    padding-right: 0;
+    height: auto;
+  }
+  .footer-banner img {
+    order: 1;
+    padding: 33px 29px;
+  }
+  .banner-content {
+    order: 2;
+    padding-right: 27px;
+    padding-left: 27px;
+  }
+  .banner-content h2 {
+    font-size: 40px;
+    padding-top: 0;
+    line-height: 48px;
+  }
+  .banner-content button {
+    margin-bottom: 48px;
+  }
+  .footer-menu {
+    flex-direction: column;
+    text-align: center;
+  }
+  .menu-title {
+    padding-top: 51px;
+    padding-bottom: 16px;
+  }
+  .social-icon {
+    padding-top: 52px;
+  }
+  .copyright-container{
+    flex-direction: column;
+    align-items: center;
 
   }
-.newsletter{
-      flex-direction: column;
-    justify-content:center;
+  .copyright-container p{
+    width: 198px;
+   text-align: center;
+   padding: 0;
   }
-  .input-field{
-      display: flex;
-      flex-direction: column;
-      margin-left: 0px;
-      margin-right: 0px;
-
-  }
-  .input-field input{
-    width: 100%
-  }
-  .subscribe-button button{
-      font-size: 14px;
-      width: 100%;
-      margin-top: 16px;
+  .copyright-link p{
+    flex-direction: row;
+    margin-top: 32px;
   }
 
+
+
+/* mobile menu */
+  .mobile-container {
+    max-width: 480px;
+    margin: auto;
+    background-color: #555;
+    height: 500px;
+    color: white;
+    border-radius: 10px;
+  }
+  .logo-container{
+    display: flex;
+    align-items: center;
+  }
+  .logo{
+    height: 48px;
+    width: 48px;
+    padding-left: 23px;
+  } 
+  .topnav {
+    overflow: hidden;
+    background-color: #28293E;
+    position: relative;
+    display: block;
+  }
+  .logo-name{
+    font-weight: bold;
+      font-size: 24px;
+      line-height: 32px;
+      color: #FFFFFF;
+  }
+  .topnav #myLinks {
+    display: none;
+    padding-left: 30px;
+  }
+  
+  .topnav a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+  .topnav a.icon {
+    background: 28293E;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: 16px;
+    margin-right: 23px;
+    border: 1px solid rgba(255, 255, 255, 0.295743);
+box-sizing: border-box;
+border-radius: 6px;
+  }
+  .active {
+    background-color: #28293E;
+    color: white;
+  }
 
 }

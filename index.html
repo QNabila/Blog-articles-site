@@ -6,10 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
     <header>
-      <!-- <nav></nav> -->
+      <div class="topnav">
+        <div class="logo-container">
+          <a href="#home" class="active"><img class="logo" src="images/logo.png" alt=""></a>
+        <h4 class="logo-name">Agency</h4>
+        </div>
+        <div id="myLinks">
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#blog">Blog</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+      
+      
+      <!-- <nav>
+
+
+      </nav> -->
       <section class="hero-section">
         <h1>Blog Articles</h1>
         <p>
@@ -95,6 +117,56 @@
           </div>
         </div>
       </section>
+      <section class="footer-banner"> 
+          <div class="banner-content">
+            <h2>Help To Build<br>
+              Your Dream<br>
+              Project</h2>
+              <p>A digital agency is a business you hire to outsource your digital marketing efforts, instead of handling in-house.</p>
+              <button>Contact Now</button>
+          </div>
+          <img src="images/pic.png" alt="">
+      </section>
+      <section class="footer-menu">
+          <h4>Agency</h4>
+        <div>
+          <h5 class="menu-title">MENU</h5>
+          <p>About</p>
+          <p>Services</p>
+          <p>Blog</p>
+          <p>Contact</p>
+        </div>
+        <div>
+          <h5 class="menu-title">SERVICE</h5>
+          <p>Design</p>
+          <p>Development</p>
+          <p>Marketing</p>
+          <p>See more</p>
+        </div>
+        <div class="social-icon">
+          <img src="images/facebook.png" alt="" srcset="">
+          <img src="images/twitter.png" alt="" srcset="">
+          <img src="images/instagram.png" alt="" srcset="">
+        </div>
+      </section>
+      <section class="copyright-container">
+          <p>Copyright © 2022 Laaqiq. All Rights Reserved.</p>
+          <div class="copyright-link">
+            <p>Terms of Use</p>
+            <p>Privacy Policy</p>
+          </div>
+      </section>
     </footer>
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myLinks");
+        if (x.style.display === "block") {
+          x.style.display = "none";
+        } else {
+          x.style.display = "block";
+        }
+      }
+      </script>
   </body>
+  
 </html>
