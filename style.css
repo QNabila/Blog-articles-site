@@ -1,16 +1,11 @@
-/* font */
+/* font family */
 @import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700;800;900&family=Open+Sans&display=swap");
 
-/* common style */
+/* common styles */
 * {
   font-family: "Epilogue", sans-serif;
   margin: 0;
 }
-
-.topnav{
-  display: none;
-}
-
 main,
 footer {
   background-color: #fdf0e9;
@@ -19,7 +14,57 @@ footer {
   padding-right: 135px;
 }
 /* common style ends */
-
+/* navigation style */
+.topnav a.icon {
+  display: none;
+}
+.topnav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+  background-color: #28293e;
+}
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+.logo {
+  height: 48px;
+  width: 48px;
+  padding-left: 135px;
+}
+.logo-name {
+  padding-left: 14px;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 32px;
+}
+#myLinks a {
+  padding-right: 40px;
+  padding-left: 40px;
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 32px;
+  text-align: center;
+  color: #ffffff;
+}
+.contact-button {
+  padding: 18px 35px;
+  border: 1px solid rgba(255, 255, 255, 0.295743);
+  box-sizing: border-box;
+  border-radius: 6px;
+  margin-right: 135px;
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #28293e;
+}
 .hero-section {
   height: 400px;
   background-color: #28293e;
@@ -40,8 +85,8 @@ footer {
   line-height: 32px;
   padding-bottom: 66px;
 }
-
-/* highlighed articles */
+/* nav style ends */
+/* highlighed articles style */
 .highlight-articles {
   display: flex;
   border-bottom: 1px solid #f3d1bf;
@@ -73,6 +118,7 @@ footer {
   color: rgba(57, 20, 0, 0.64);
   font-size: 16px;
 }
+/* blog articles style */
 .blog-articles {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -104,7 +150,6 @@ footer {
   border: none;
   color: #391400;
 }
-
 /* Footer Design */
 .newsletter {
   display: flex;
@@ -146,12 +191,10 @@ input::placeholder {
   color: rgba(57, 20, 0, 0.64);
   opacity: 1; /* Firefox */
 }
-
 input:-ms-input-placeholder {
   /* Internet Explorer 10-11 */
   color: rgba(57, 20, 0, 0.64);
 }
-
 input ::-ms-input-placeholder {
   /* Microsoft Edge */
   color: rgba(57, 20, 0, 0.64);
@@ -235,10 +278,10 @@ input ::-ms-input-placeholder {
   padding-left: 8px;
 }
 /* copyright area */
-.copyright-container{
+.copyright-container {
   display: flex;
 }
-.copyright-container{
+.copyright-container {
   padding-top: 43px;
   padding-bottom: 52px;
   margin-top: 68px;
@@ -249,7 +292,7 @@ input ::-ms-input-placeholder {
   color: rgba(57, 20, 0, 0.64);
   justify-content: space-between;
 }
-.copyright-link{
+.copyright-link {
   display: flex;
   font-weight: normal;
   font-size: 16px;
@@ -257,22 +300,79 @@ input ::-ms-input-placeholder {
   text-align: right;
   color: #391400;
 }
-.copyright-link p{
+.copyright-link p {
   padding-left: 68px;
 }
-
-
-
 
 /* Media Queries */
 
 /* Mobile devices */
 @media only screen and (max-width: 688px) {
+  /* mobile nav menu */
+  .mobile-container {
+    max-width: 480px;
+    margin: auto;
+    background-color: #555;
+    height: 500px;
+    color: white;
+    border-radius: 10px;
+  }
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  .logo {
+    height: 48px;
+    width: 48px;
+    padding-left: 23px;
+  }
+  .topnav {
+    overflow: hidden;
+    background-color: #28293e;
+    position: relative;
+    display: block;
+  }
+  .topnav #myLinks{
+    display: none;
+  }
+  .logo-name {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    color: #ffffff;
+  }
+  .topnav a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+  .topnav a.icon {
+    background: 28293e;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: 30px;
+    margin-right: 23px;
+    border: 1px solid rgba(255, 255, 255, 0.295743);
+    box-sizing: border-box;
+    border-radius: 6px;
+  }
+  .contact-button {
+    display: none;
+  }
+  .active {
+    background-color: #28293e;
+    color: white;
+  }
+  /* hero section style */
   .hero-section {
     height: 464px;
   }
   .hero-section h1 {
-    padding-top: 144px;
+    padding-top: 87px;
     padding-bottom: 12px;
   }
   .hero-section p {
@@ -284,6 +384,7 @@ input ::-ms-input-placeholder {
     padding-right: 23px;
     padding-left: 23px;
   }
+  /* highlight articles style */
   .highlight-articles {
     display: block;
   }
@@ -299,7 +400,6 @@ input ::-ms-input-placeholder {
     margin-left: 0;
     margin-right: 0;
   }
-
   /*Grid blog articles */
   .blog-articles {
     grid-template-columns: repeat(1, 1fr);
@@ -308,7 +408,6 @@ input ::-ms-input-placeholder {
     margin-top: 33px;
     margin-bottom: 0;
   }
-
   /* footer */
   .newsletter h3 {
     text-align: left;
@@ -368,80 +467,18 @@ input ::-ms-input-placeholder {
   .social-icon {
     padding-top: 52px;
   }
-  .copyright-container{
+  .copyright-container {
     flex-direction: column;
     align-items: center;
-
   }
-  .copyright-container p{
+  .copyright-container p {
     width: 198px;
-   text-align: center;
-   padding: 0;
+    text-align: center;
+    padding: 0;
   }
-  .copyright-link p{
+  .copyright-link p {
     flex-direction: row;
     margin-top: 32px;
-  }
-
-
-
-/* mobile menu */
-  .mobile-container {
-    max-width: 480px;
-    margin: auto;
-    background-color: #555;
-    height: 500px;
-    color: white;
-    border-radius: 10px;
-  }
-  .logo-container{
-    display: flex;
-    align-items: center;
-  }
-  .logo{
-    height: 48px;
-    width: 48px;
-    padding-left: 23px;
-  } 
-  .topnav {
-    overflow: hidden;
-    background-color: #28293E;
-    position: relative;
-    display: block;
-  }
-  .logo-name{
-    font-weight: bold;
-      font-size: 24px;
-      line-height: 32px;
-      color: #FFFFFF;
-  }
-  .topnav #myLinks {
-    display: none;
-    padding-left: 30px;
-  }
-  
-  .topnav a {
-    color: white;
-    padding: 12px 16px;
-    text-decoration: none;
-    font-size: 17px;
-    display: block;
-  }
-  .topnav a.icon {
-    background: 28293E;
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 0;
-    margin-top: 16px;
-    margin-right: 23px;
-    border: 1px solid rgba(255, 255, 255, 0.295743);
-box-sizing: border-box;
-border-radius: 6px;
-  }
-  .active {
-    background-color: #28293E;
-    color: white;
   }
 
 }
